@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Служба контроля проектов — защита ИИ-кэмпа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="preza.css">
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="glow" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+  <svg class="supr" id="supr" viewBox="0 0 1920 1080" aria-hidden="true">
+    <defs>
+      <linearGradient id="gWave" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b5bdb"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+      <linearGradient id="gTeal" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+      <linearGradient id="gViolet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+    </defs>
+    <g class="f" data-k="doc"><g class="in"><rect class="pl sheet" x="-120" y="-160" width="240" height="320" rx="10"/><rect class="pl" x="-84" y="-118" width="120" height="14" rx="7" fill="url(#gWave)"/><g class="ln"><rect x="-84" y="-78" width="168" height="8" rx="4"/><rect x="-84" y="-56" width="150" height="8" rx="4"/><rect x="-84" y="-34" width="168" height="8" rx="4"/><rect x="-84" y="-12" width="110" height="8" rx="4"/><rect x="-84" y="22" width="168" height="8" rx="4"/><rect x="-84" y="44" width="130" height="8" rx="4"/></g><circle class="pl" cx="58" cy="108" r="30" fill="none" stroke="#7c3aed" stroke-width="5"/></g></g>
+    <g class="f" data-k="doc2"><g class="in"><rect class="pl sheet" x="-95" y="-125" width="190" height="250" rx="10"/><g class="ln"><rect x="-64" y="-90" width="128" height="8" rx="4"/><rect x="-64" y="-68" width="100" height="8" rx="4"/><rect x="-64" y="-46" width="128" height="8" rx="4"/><rect x="-64" y="-24" width="80" height="8" rx="4"/></g><rect class="pl" x="-64" y="20" width="128" height="72" rx="6" fill="url(#gTeal)"/></g></g>
+    <g class="f" data-k="stamp"><g class="in"><circle class="pl" cx="0" cy="0" r="104" fill="none" stroke="url(#gViolet)" stroke-width="7"/><circle class="pl" cx="0" cy="0" r="84" fill="none" stroke="url(#gViolet)" stroke-width="2.5"/><path id="arcTop" d="M-70 0 A70 70 0 0 1 70 0" fill="none"/><text class="stamp-t"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">ЗАФИКСИРОВАНО</textPath></text><path class="pl" d="M-30 18 L-8 40 L36 -6" fill="none" stroke="#2dd4bf" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="f" data-k="hash"><g class="in"><rect class="pl chip" x="-220" y="-30" width="440" height="60" rx="30"/><text class="hash-t" x="0" y="9" text-anchor="middle">SHA-256 · 9f2c…a71e</text></g></g>
+    <g class="f" data-k="bubble"><g class="in"><path class="pl" d="M-130 -60 h260 a20 20 0 0 1 20 20 v70 a20 20 0 0 1 -20 20 h-200 l-40 34 v-34 h-20 a20 20 0 0 1 -20 -20 v-70 a20 20 0 0 1 20 -20 z" fill="url(#gWave)"/><g class="ln lw"><rect x="-108" y="-34" width="200" height="9" rx="4"/><rect x="-108" y="-10" width="150" height="9" rx="4"/></g></g></g>
+    <g class="f" data-k="bubble2"><g class="in"><path class="pl" d="M-100 -46 h200 a18 18 0 0 1 18 18 v52 a18 18 0 0 1 -18 18 h-20 v30 l-36 -30 h-144 a18 18 0 0 1 -18 -18 v-52 a18 18 0 0 1 18 -18 z" fill="url(#gTeal)"/><g class="ln lw"><rect x="-80" y="-22" width="150" height="9" rx="4"/><rect x="-80" y="0" width="100" height="9" rx="4"/></g></g></g>
+    <g class="f" data-k="lock"><g class="in"><path class="pl" d="M-34 -10 v-26 a34 34 0 0 1 68 0 v26" fill="none" stroke="#c4b5fd" stroke-width="12"/><rect class="pl" x="-56" y="-12" width="112" height="90" rx="14" fill="url(#gViolet)"/><circle cx="0" cy="30" r="10" fill="#0b0d1a"/></g></g>
+    <g class="f" data-k="photo"><g class="in"><rect class="pl sheet" x="-90" y="-70" width="180" height="140" rx="8"/><rect class="pl" x="-76" y="-56" width="152" height="96" rx="4" fill="url(#gTeal)"/><path class="pl" d="M-76 40 L-30 -6 L6 26 L34 2 L76 40 Z" fill="#3b5bdb"/><circle class="pl" cx="44" cy="-30" r="12" fill="#fff"/></g></g>
+    <g class="f" data-k="ring"><g class="in"><circle class="pl ring" cx="0" cy="0" r="160"/></g></g>
+    <g class="f" data-k="line"><g class="in"><rect class="pl" x="-380" y="-3" width="760" height="6" rx="3" fill="url(#gWave)"/></g></g>
+    <g class="f" data-k="dot"><g class="in"><circle class="pl" cx="0" cy="0" r="22" fill="#38bdf8"/></g></g>
+    <g class="f" data-k="dot2"><g class="in"><circle class="pl" cx="0" cy="0" r="14" fill="#7c3aed"/></g></g>
+  </svg>
+
+  <section class="slide s1">
+    <p class="kick">ИИ-кэмп 2026 · защита проекта</p>
+    <h1>Служба контроля<br><em>проектов в ВЧ</em></h1>
+    <p class="lead">Претензии клиентов и договорённости с заказчиком — в одном месте, с доказательствами, которые нельзя исправить</p>
+    <div class="team">
+      <div><span>Лидер</span><b>Евгений Зорин</b></div>
+      <div><span>Наставник</span><b>Евгений Панькин</b></div>
+    </div>
+    <div class="pair">
+      <div class="card"><span>Кому помогает</span>Юрслужбе и менеджерам проектов — когда спор об ущербе или нарушении обязательств</div>
+      <div class="card"><span>Задача в декабре</span>В сезон корпоративов каждый спор с заказчиком зафиксирован в ВЧ и готов к разбору</div>
+    </div>
+  </section>
+
+  <section class="slide s2">
+    <p class="num">02</p>
+    <h2>Как работали <em>до внедрения</em></h2>
+    <div class="rows">
+      <div class="row head"><span>Как было</span><span>Последствие</span></div>
+      <div class="row"><b>Клиент жалуется звонком, в почту, в мессенджер</b><span>Обращения теряются по каналам</span></div>
+      <div class="row"><b>Договорились с заказчиком в личке менеджера</b><span>Потом он всё отрицает</span></div>
+      <div class="row"><b>Фото и файлы — в телефонах сотрудников</b><span>Нет доказательной силы</span></div>
+      <div class="row"><b>Юрист узнаёт о споре последним</b><span>Воронку СКП заполняют руками</span></div>
+    </div>
+    <p class="foot">Исходных замеров нет: обращения не собирались в одном месте. План сбора — число споров и срок от инцидента до юриста по воронке СКП</p>
+  </section>
+
+  <section class="slide s3">
+    <p class="num">03</p>
+    <h2>Три сценария <em>решения</em></h2>
+    <ol class="scen">
+      <li data-v="0"><i>1</i><div><b>Обращение клиента</b><span>QR или ссылка из договора → форма → карточка с перепиской и сразу в воронку СКП Битрикса</span></div></li>
+      <li data-v="1"><i>2</i><div><b>Чат с заказчиком</b><span>Вкладка в чате мероприятия: менеджер даёт ссылку, переписку не исправить и не удалить</span></div></li>
+      <li><i>3</i><div><b>Наша претензия</b><span>Команда на площадке фиксирует проблему со стороны заказчика: фото, описание, ссылка представителю</span></div></li>
+    </ol>
+    <p class="note">Во всех трёх — протокол в PDF: время, IP, авторы, файлы с SHA-256</p>
+    <div class="screen"><video id="demo" src="media/sc1.mp4" poster="media/sc1.jpg" muted playsinline preload="auto"></video></div>
+    <div class="qr"><img src="media/qr.svg" alt=""><p><b>Форма обращения</b>kontrol-proektov.vyzovchat.ru</p></div>
+  </section>
+
+  <section class="slide s4">
+    <p class="num">04</p>
+    <h2>Что запущено <em>и кто пользуется</em></h2>
+    <div class="stats">
+      <div><b>3</b><span>сценария работают в ВЧ</span></div>
+      <div><b>13.11</b><span>первые ссылки заказчикам на живых заказах</span></div>
+      <div><b>4</b><span>чата с заказчиком открыли менеджеры</span></div>
+      <div><b>6</b><span>типов обращений распределены на юристов</span></div>
+    </div>
+    <ul class="ticks">
+      <li>Форма для клиента на отдельном адресе — без входа и паролей</li>
+      <li>Экран юриста: стадии как в Битриксе, сведения, файлы, история</li>
+      <li>Ролики для юрслужбы и менеджеров: как принять претензию и как вести чат с заказчиком</li>
+    </ul>
+    <div class="card limit"><span>Ограничения</span>Заказчики по выданным ссылкам ещё не заходили. Уведомления в Telegram и MAX — следующим шагом</div>
+  </section>
+
+  <section class="slide s5">
+    <p class="num">05</p>
+    <h2>Первые результаты — <em>до и после</em></h2>
+    <div class="rows four">
+      <div class="row head"><span>Показатель</span><span>До</span><span>Сейчас</span><span>Цель декабря</span></div>
+      <div class="row"><b>Канал обращения</b><span>Звонок, почта, мессенджер</span><span class="fact">Одна форма по QR</span><span class="goal">QR в каждом договоре</span></div>
+      <div class="row"><b>Путь до юриста</b><span>Не отслеживался</span><span class="fact">Карточка в воронке СКП сразу</span><span class="goal">В день инцидента</span></div>
+      <div class="row"><b>Доказательства</b><span>Личка и телефоны</span><span class="fact">Протокол PDF с SHA-256</span><span class="goal">По каждому спору</span></div>
+    </div>
+    <p class="foot">Фактических споров через систему пока не было — показываем, что изменилось в процессе, а не придуманные цифры</p>
+  </section>
+
+  <section class="slide s6">
+    <p class="num">06</p>
+    <h2>Какой эффект <em>ожидаем в декабре</em></h2>
+    <div class="pair">
+      <div class="card big"><b>Споры в нашу пользу</b><p class="formula">претензии, закрытые с протоколом<br><small>×</small> средняя сумма претензии</p></div>
+      <div class="card big"><b>Время юриста</b><p class="formula">время на сбор доказательств до − после<br><small>×</small> число споров в сезон</p></div>
+    </div>
+    <p class="foot">Допущения: суммы претензий и время на разбор берём у юрслужбы по ноябрю, считаем только мероприятия, где выдана ссылка заказчику</p>
+  </section>
+
+  <section class="slide s7">
+    <p class="num">07</p>
+    <h2>Как обеспечим <em>использование в декабре</em></h2>
+    <div class="grid4">
+      <div class="card"><span>Кто</span>Менеджеры дают ссылку заказчику на каждом мероприятии, старшие фиксируют проблемы на площадке, юристы ведут обращения</div>
+      <div class="card"><span>Доступ</span>Сотрудникам — внутри ВЧ. Клиенту — QR в договоре, без регистрации</div>
+      <div class="card"><span>Обучение</span>Ролики «Претензия → PDF» и «Чат с заказчиком», разбор с менеджерами</div>
+      <div class="card"><span>Ответственный</span>Евгений Зорин</div>
+    </div>
+    <p class="foot">Цель: у каждого мероприятия сезона есть чат с заказчиком, у каждого спора — карточка в ВЧ</p>
+  </section>
+
+  <section class="slide s8">
+    <p class="num">08</p>
+    <h2>Что нужно доделать <em>до сезона</em></h2>
+    <div class="rows">
+      <div class="row head"><span>Доработка</span><span>Ответственные</span></div>
+      <div class="row"><b>QR и ссылка на форму — в шаблон договора</b><span>Юрслужба</span></div>
+      <div class="row"><b>Включить неизменяемость переписки навсегда</b><span>Юрслужба, разработка ВЧ</span></div>
+      <div class="row"><b>Уведомления клиенту в Telegram и MAX</b><span>Разработка ВЧ</span></div>
+      <div class="row"><b>Связать обращение с заказом Tony по номеру договора</b><span>Разработка ВЧ и Tony</span></div>
+    </div>
+  </section>
+
+  <section class="slide s9">
+    <p class="num">09</p>
+    <h2>Как подтвердим <em>итог декабря</em></h2>
+    <div class="rows three">
+      <div class="row head"><span>Метрика</span><span>Цель декабря</span><span>Источник</span></div>
+      <div class="row"><b>Мероприятия со ссылкой для заказчика</b><span class="goal">Все мероприятия сезона</span><span>Служба контроля в ВЧ</span></div>
+      <div class="row"><b>Обращения через форму</b><span class="goal">Все претензии клиентов</span><span>Воронка СКП в Битриксе</span></div>
+      <div class="row"><b>Срок от инцидента до юриста</b><span class="goal">День инцидента</span><span>Стадии воронки СКП</span></div>
+      <div class="row"><b>Споры с протоколом PDF</b><span class="goal">Каждый</span><span>Юрслужба</span></div>
+    </div>
+    <p class="foot">Итоги — к концу декабря, ответственный Евгений Зорин</p>
+  </section>
+
+  <section class="slide s10">
+    <p class="num">10</p>
+    <h2>Итог <em>и обязательства команды</em></h2>
+    <p class="quote">Договорились — значит, записано</p>
+    <div class="grid3">
+      <div class="card"><span>Работает</span>Три сценария в ВЧ: обращение клиента, чат с заказчиком, наша претензия. Протокол PDF и воронка СКП</div>
+      <div class="card"><span>Ждём в декабре</span>Каждый спор сезона — с перепиской и файлами, которые не исправить, и у юриста в день инцидента</div>
+      <div class="card"><span>Обязуемся</span>Вписать QR в договор, выдать ссылки на все мероприятия сезона и зафиксировать результат по воронке</div>
+    </div>
+    <p class="thanks">Спасибо!</p>
+  </section>
+
+  <div class="pager" id="pager"></div>
+</div>
+<div class="black" id="black" hidden></div>
+<script src="preza.js"></script>
+</body>
+</html>
