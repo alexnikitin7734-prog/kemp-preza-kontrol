@@ -87,8 +87,8 @@
     else if (k === 'End') go(slides.length - 1);
   });
 
-  // слайд 3: сценарий 1 и 2 по очереди, карточка сценария горит, пока идёт его ролик
-  var CLIPS = ['media/sc1.mp4', 'media/sc2.mp4'], scen = [].slice.call(document.querySelectorAll('.scen li')), now = 0;
+  // слайд 3: сценарии по очереди, карточка сценария горит, пока идёт его ролик
+  var CLIPS = ['media/sc1.mp4', 'media/sc2.mp4', 'media/sc3.mp4'], scen = [].slice.call(document.querySelectorAll('.scen li')), now = 0;
   function clip(n) {
     now = n;
     if (demo.getAttribute('src') !== CLIPS[n]) demo.src = CLIPS[n];
