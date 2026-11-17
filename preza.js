@@ -58,7 +58,7 @@
     slides[i].classList.add('on');
     [].forEach.call(pager.children, function (d, k) { d.classList.toggle('on', k === i); });
     compose(i);
-    if (slides[i].classList.contains('s3')) clip(0); else demo.pause();
+    if (slides[i].classList.contains('s3')) clip(0); else { demo.pause(); music.pause(); }
     history.replaceState(null, '', '#' + (i + 1));
   }
 
@@ -89,13 +89,20 @@
 
   // слайд 3: сценарии по очереди, карточка сценария горит, пока идёт его ролик
   var CLIPS = ['media/sc1.mp4', 'media/sc2.mp4', 'media/sc3.mp4'], scen = [].slice.call(document.querySelectorAll('.scen li')), now = 0;
+  // музыка — «ритм без мелодии» из нашей папки, длина = все три ролика; с первым роликом начинается заново
+  var music = document.getElementById('music');
   function clip(n) {
     now = n;
+    if (n === 0) { music.currentTime = 0; music.play().catch(function () {}); }
     if (demo.getAttribute('src') !== CLIPS[n]) demo.src = CLIPS[n];
     demo.currentTime = 0;
     demo.play().catch(function () {});
     scen.forEach(function (li) { li.classList.toggle('on', li.dataset.v === String(n)); });
   }
+  // браузер не даёт звук без действия человека: если слайд открыли ссылкой, музыка начнётся с первого нажатия
+  ['keydown', 'pointerdown'].forEach(function (t) {
+    addEventListener(t, function () { if (slides[cur].classList.contains('s3') && music.paused) music.play().catch(function () {}); });
+  });
   demo.addEventListener('ended', function () { clip((now + 1) % CLIPS.length); });
   scen.forEach(function (li) { if (li.dataset.v) li.addEventListener('click', function () { clip(+li.dataset.v); }); });
   demo.addEventListener('click', function () { if (demo.paused) demo.play(); else demo.pause(); });
